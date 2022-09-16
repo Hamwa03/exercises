@@ -47,3 +47,24 @@ function exercise3() {
     arrayReverse = array.reverse();
     arrayReverse.forEach(frequency => console.log(`${frequency}`));
 }
+
+function exercise4() {
+    var textboxValue = document.getElementById('txt').value;
+    var blankSpace = textboxValue.replace(/\s/g,'')
+    const letters = blankSpace.split('');
+
+    let obj = [];
+
+    letters.forEach((letter) => {
+        if (obj[letter] === undefined) {
+            obj[letter] = 1;
+        } else{
+            obj[letter] ++;
+        }
+    }
+    );
+
+    for (const frequency in obj) {
+        console.log(`${frequency} ${obj [frequency]}`);
+    }
+}
