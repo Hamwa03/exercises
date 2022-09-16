@@ -68,3 +68,17 @@ function exercise4() {
         console.log(`${frequency} ${obj [frequency]}`);
     }
 }
+
+function exercise5() {
+
+    var leetSpeek = document.getElementById('txt');
+    var leetAlphabet = new Map ([['a','4'],['b','8'],['e','3'],['g','6'],['i','1'],['l','1*'],['o','0'],['r','2'],['s','5'],['t','7'],['z','2*']]);
+
+    text = leetSpeek.value.toLowerCase();
+    for (var i = 0; i < text.length; i++){
+        if ( leetAlphabet.get(text[i])) {
+            text = text.replace(text[i], leetAlphabet.get(text[i]));
+        }
+    }
+    console.log(text)
+}
